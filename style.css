@@ -1,21 +1,1664 @@
-:root { --ink:#394238; --cream:#f6f1e9; --paper:#fffdf9; --sage:#7e8c77; --gold:#b89b69; --serif:'Noto Serif TC',serif; --display:'Cormorant Garamond',serif; }
-* { box-sizing:border-box; } html { scroll-behavior:smooth; } body { margin:0; color:var(--ink); background:var(--cream); font-family:var(--serif); } button,a { font:inherit; } .sound-toggle { position:fixed; z-index:10; top:22px; right:22px; display:flex; align-items:center; gap:8px; padding:10px 13px; border:1px solid rgba(255,255,255,.55); border-radius:99px; background:rgba(34,38,31,.22); color:white; backdrop-filter:blur(8px); cursor:pointer; font:11px var(--display); letter-spacing:.14em; } .sound-toggle svg { width:17px; fill:currentColor; } .sound-toggle.muted svg { opacity:.5; } .hero { position:relative; min-height:100svh; display:grid; place-items:center; overflow:hidden; color:white; text-align:center; } .hero>img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 40%; } .hero-shade { position:absolute; inset:0; background:linear-gradient(180deg,rgba(20,28,20,.2),rgba(20,28,20,.06) 45%,rgba(20,28,20,.45)); } .hero-copy,.scroll-note { position:relative; } .eyebrow { margin:0 0 15px; color:var(--gold); font:500 12px var(--display); letter-spacing:.22em; } .hero .eyebrow { color:#fff; } h1,h2,h3 { font-weight:500; } h1 { margin:0; font-size:clamp(50px,11vw,92px); line-height:.9; letter-spacing:.06em; text-shadow:0 2px 18px #3338; } h1 i { font:italic 1em var(--display); margin:0 .1em; } .hero-date { margin-top:25px; font:13px var(--display); letter-spacing:.23em; } .scroll-note { position:absolute; bottom:26px; font:11px var(--display); letter-spacing:.18em; } .scroll-note span { display:block; font-size:20px; margin-top:3px; } .section-pad { padding:100px max(24px,calc((100% - 620px)/2)); text-align:center; } h2 { margin:0; font-size:clamp(29px,7vw,43px); line-height:1.45; letter-spacing:.04em; } .intro p:last-child { max-width:410px; margin:28px auto 0; line-height:2; font-size:14px; } .carousel-section { background:var(--ink); padding:55px 0 40px; } .carousel { max-width:700px; margin:auto; overflow:hidden; } .slide { display:none; margin:0; color:white; animation:fade .7s ease; } .slide.active { display:block; } .slide img { display:block; width:86%; aspect-ratio:4/5; margin:auto; object-fit:cover; object-position:50% 40%; } .crop-two { object-position:28% 48%!important; } .crop-three { object-position:72% 44%!important; } figcaption { padding:21px 20px 13px; text-align:center; font-size:14px; letter-spacing:.05em; } .carousel-controls { display:flex; align-items:center; justify-content:center; gap:20px; color:#f4efe6; font:15px var(--display); letter-spacing:.15em; } .carousel-controls button { border:0; background:transparent; color:inherit; cursor:pointer; font-size:22px; } .carousel-controls b { color:#c9a76e; } .memories { background:#e9e6dc; overflow:hidden; } .photo-strip { display:flex; align-items:flex-start; justify-content:center; gap:12px; margin:48px -26px 60px; } .polaroid { flex:0 0 35%; margin:0; padding:9px 9px 20px; background:var(--paper); box-shadow:0 9px 17px #52604a22; } .polaroid img { width:100%; aspect-ratio:3/4; object-fit:cover; display:block; } .polaroid figcaption { padding:8px 0 0; color:#576052; font:italic 20px var(--display); } .tilt-left { transform:rotate(-7deg); }.tilt-right { transform:rotate(6deg); margin-top:17px; }.small { margin-top:43px; }.countdown { display:flex; justify-content:center; gap:14px; }.countdown div { min-width:53px; }.countdown strong { display:block; color:var(--sage); font:600 38px var(--display); line-height:1; }.countdown span,.countdown-label { font-size:11px; letter-spacing:.15em; }.countdown-label { margin:18px 0 0; }.calendar-wrap { background:var(--paper); }.calendar-wrap h2 { font-size:35px; }.calendar { max-width:390px; margin:37px auto 0; }.weekdays,.dates { display:grid; grid-template-columns:repeat(7,1fr); }.weekdays { border-bottom:1px solid #d6d2c8; padding-bottom:12px; color:var(--gold); font-size:12px; }.dates span { display:grid; place-items:center; height:47px; font-size:14px; }.dates .wedding-day { position:relative; color:white; z-index:0; font-weight:600; }.dates .wedding-day:before { content:''; position:absolute; z-index:-1; width:33px; height:33px; border-radius:50%; background:var(--sage); }.date-detail { margin:27px 0 0; color:var(--gold); font:16px var(--display); letter-spacing:.14em; }.venue { background:#d9e0d4; }.venue-card { max-width:410px; margin:44px auto 0; padding:34px 25px; border:1px solid #fff9; background:#f9f7f0a8; }.venue-icon { color:var(--gold); font:37px var(--display); }.venue-label { margin:6px 0 10px; color:var(--gold); font:12px var(--display); letter-spacing:.2em; }.venue h3 { margin:0; font-size:23px; }.venue-card>p:not(.venue-label) { font-size:13px; line-height:1.8; }.venue-time { margin:18px 0!important; color:var(--sage); font:15px var(--display)!important; letter-spacing:.1em; }.venue-card a { display:inline-block; padding:12px 20px; border-bottom:1px solid var(--sage); color:var(--ink); text-decoration:none; font-size:13px; }.venue-card a span { margin-left:8px; color:var(--gold); font-size:18px; } footer { padding:27px 20px; background:var(--ink); color:#e8e3d9; text-align:center; font:12px var(--display); letter-spacing:.2em; } @keyframes fade { from { opacity:.1; transform:scale(.99) } to { opacity:1; transform:scale(1) } } @media (min-width:700px) { .hero { min-height:800px; }.section-pad { padding-top:120px; padding-bottom:120px; }.photo-strip { margin-left:0; margin-right:0; }.polaroid { max-width:175px; }.slide img { max-height:620px; width:65%; } }
-:root { --ink:#3a2d27; --cream:#f7f2e9; --paper:#fffdf8; --sage:#9b784d; --gold:#b99a62; }
-.scroll-note { color:#fff8e8; text-decoration:none; text-shadow:0 1px 8px #31201699; }
-.hero-shade { background:linear-gradient(180deg,rgba(57,41,26,.18),rgba(57,41,26,.04) 45%,rgba(43,28,19,.48)); }
-.carousel-section { background:#352720; }.memories { background:#f0e8dc; }.polaroid figcaption { color:#735e43; }.venue { background:#e5d6bd; }.venue-card { background:#fffaf0b8; }.quote-tile { background:#b79a69; }
-.love-letter { display:grid; gap:42px; align-items:center; background:#fffaf2; text-align:left; }.letter-image { position:relative; }.letter-image:after { content:''; position:absolute; inset:14px -14px -14px 14px; border:1px solid #c9a977; z-index:0; }.letter-image img { position:relative; z-index:1; display:block; width:100%; aspect-ratio:4/5; object-fit:cover; }.letter-copy p:not(.eyebrow) { max-width:430px; line-height:2; font-size:14px; }.letter-copy span { display:block; margin-top:28px; color:var(--gold); font:15px var(--display); letter-spacing:.16em; }
-.gallery { background:#f0e7da; }.editorial-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; max-width:680px; margin:42px auto 0; text-align:left; }.editorial-grid figure { margin:0; }.editorial-grid img { display:block; width:100%; height:100%; min-height:210px; object-fit:cover; }.editorial-grid .grid-large { grid-column:span 2; }.grid-large img { aspect-ratio:16/9; }.editorial-grid figcaption { padding:10px 0; color:#846b4b; font:14px var(--display); letter-spacing:.08em; }.quote-tile { display:grid; min-height:210px; place-items:center; padding:15px; color:#fff9ef; text-align:center; font:34px var(--display); line-height:.55; }.quote-tile span { font:22px var(--serif); line-height:1.7; }
-.reveal { opacity:0; transform:translateY(24px); transition:opacity .85s ease,transform .85s ease; }.reveal.visible { opacity:1; transform:translateY(0); } @media (min-width:700px) { .love-letter { grid-template-columns:1fr 1fr; }.letter-copy { padding-left:30px; }.editorial-grid { gap:20px; } }
-.sound-toggle { width:46px; height:46px; justify-content:center; padding:0; border-color:#fff8; background:rgba(54,38,26,.31); transition:background .3s ease,transform .3s ease; }.sound-toggle:hover { background:rgba(185,154,98,.55); transform:scale(1.06); }.sound-toggle svg { width:21px; }.sound-toggle.playing svg { animation:music-spin 4s linear infinite; }.sound-toggle.muted { opacity:.76; }.venue-soon { display:inline-block; padding:12px 3px; border-bottom:1px solid var(--sage); color:var(--sage); font:12px var(--display); letter-spacing:.13em; }
-.sound-toggle { display:grid; place-items:center; line-height:0; }.sound-toggle svg { display:block; fill:none; stroke:currentColor; stroke-width:1.55; stroke-linecap:round; stroke-linejoin:round; overflow:visible; }.hero>img { object-position:50% 68%; }.grid-large img { object-position:50% 70%; }.eyebrow { font-size:10px; font-weight:500; letter-spacing:.13em; line-height:1.6; }.hero .eyebrow { letter-spacing:.16em; }.intro h2,.memories h2,.gallery h2,.calendar-wrap h2,.venue h2 { color:#49362b; font-weight:500; letter-spacing:.08em; }.intro p:last-child,.letter-copy p:not(.eyebrow) { color:#6c5749; font-size:13px; letter-spacing:.045em; }.letter-copy h2 { letter-spacing:.07em; }.carousel figcaption { color:#f6ead7; font-family:var(--serif); font-size:13px; line-height:1.8; letter-spacing:.035em; }.editorial-grid figcaption { font-size:11px; letter-spacing:.045em; text-transform:none; }.quote-tile span { font-size:19px; font-weight:500; letter-spacing:.08em; }.polaroid figcaption { font-size:17px; }.venue-label,.venue-soon { font-size:10px; letter-spacing:.11em; }
-.hero-copy { transform:translateY(-27vh); }.polaroid,.tilt-left,.tilt-right { transform:none; }.polaroid img { transform:none; backface-visibility:visible; image-rendering:auto; } @media (min-width:900px) { .hero { background:#2f251f; }.hero>img { inset:0 auto 0 50%; width:min(56vw,660px); height:100%; transform:translateX(-50%); object-fit:cover; object-position:50% 67%; }.hero-copy { transform:translateY(-28vh); }.hero-shade { background:linear-gradient(90deg,rgba(47,37,31,.65),rgba(47,37,31,.08) 34%,rgba(47,37,31,.1) 68%,rgba(47,37,31,.65)); } }
-.hero-copy { transform:translateY(-17vh); }.hero .eyebrow { font:500 clamp(12px,1.15vw,15px) var(--display); letter-spacing:.2em; }.hero-date { font-size:clamp(13px,1.1vw,16px); }.grid-large { width:min(100%,390px); justify-self:center; }.grid-large img { aspect-ratio:3/4; object-position:50% 62%; }.grid-large figcaption { text-align:center; } @media (min-width:900px) { .hero { min-height:clamp(760px,100svh,980px); }.hero>img { object-position:50% 65%; }.hero-copy { transform:translateY(-18vh); }.carousel { padding-inline:20px; }.slide img { width:min(58%,460px); }.editorial-grid { grid-template-columns:repeat(2,minmax(0,1fr)); max-width:700px; } .grid-large { width:420px; } }
-.hero-copy { transform:translateY(-23vh); }.polaroid { overflow:hidden; transform:translateZ(0); backface-visibility:hidden; }.polaroid img { image-rendering:auto; transform:translateZ(0); backface-visibility:hidden; }.tilt-left { transform:translateZ(0) rotate(-3deg); }.tilt-right { transform:translateZ(0) rotate(3deg); } @media (min-width:900px) { .hero-copy { transform:translateY(-24vh); }.photo-strip { gap:18px; }.polaroid { flex-basis:165px; } }
-.hero:after { content:''; position:absolute; width:65vw; height:65vw; max-width:660px; max-height:660px; border:1px solid rgba(234,209,166,.4); border-radius:50%; pointer-events:none; animation:halo 9s ease-in-out infinite; }.hero-copy { z-index:1; }.scroll-note { z-index:2; }.gallery h2 { position:relative; z-index:1; margin-bottom:6px; }.editorial-grid { position:relative; z-index:1; }.gallery { position:relative; overflow:hidden; }.gallery:before { content:'LOVE'; position:absolute; top:4%; left:-3%; color:rgba(185,154,98,.11); font:clamp(100px,24vw,240px) var(--display); letter-spacing:.06em; }.editorial-grid figure { overflow:hidden; background:#ded2bf; }.editorial-grid img { transition:transform .9s cubic-bezier(.2,.65,.25,1); }.editorial-grid figure:hover img { transform:scale(1.05); }.letter-image img { transition:transform 1.2s ease; }.love-letter:hover .letter-image img { transform:scale(1.025); }.venue-card { box-shadow:0 20px 50px rgba(88,60,25,.12); }.intro h2,.memories h2,.gallery h2 { text-wrap:balance; } @keyframes music-spin { to { transform:rotate(360deg); } } @keyframes halo { 0%,100% { transform:scale(.92); opacity:.3; } 50% { transform:scale(1.06); opacity:.7; } } @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; scroll-behavior:auto!important; } }
-.hero-copy { transform:translateY(-27vh); }.polaroid,.tilt-left,.tilt-right { transform:none; }.polaroid img { transform:none; backface-visibility:visible; image-rendering:auto; } @media (min-width:900px) { .hero { background:#2f251f; }.hero>img { inset:0 auto 0 50%; width:min(56vw,660px); height:100%; transform:translateX(-50%); object-fit:cover; object-position:50% 67%; }.hero-copy { transform:translateY(-28vh); }.hero-shade { background:linear-gradient(90deg,rgba(47,37,31,.65),rgba(47,37,31,.08) 34%,rgba(47,37,31,.1) 68%,rgba(47,37,31,.65)); } }
-.hero-copy { transform:translateY(-30vh); }.hero-date { margin-top:14px; font:500 clamp(16px,1.45vw,21px) var(--display); letter-spacing:.18em; }.full-names { margin:0 0 20px; color:#9a7a4d; font:500 13px var(--serif); letter-spacing:.16em; }.love-letter .full-names { margin-top:-7px; }.eyebrow { font-size:12px; letter-spacing:.17em; }.carousel-controls,.date-detail,.venue-soon,footer { font-size:14px; }.polaroid figcaption { font-size:19px; }.editorial-grid figcaption { font-size:13px; }.grid-large { width:100%; padding:18px; background:#e7d5ba; }.grid-large img { width:min(100%,390px); margin-inline:auto; }.grid-large figcaption { padding:13px 0 2px; } @media (min-width:900px) { .hero-copy { transform:translateY(-31vh); }.grid-large { padding:24px; }.grid-large img { width:390px; } }
-.carousel-names { color:#e8d4b1; text-align:center; padding-top:4px; }
-.eyebrow,.carousel-controls,.date-detail,.venue-label,.venue-soon,footer,.editorial-grid figcaption,.polaroid figcaption { font-family:'Bodoni Moda',var(--display); }.eyebrow { font-size:clamp(14px,1.55vw,20px); font-weight:500; letter-spacing:.15em; }.hero .eyebrow { font-size:clamp(15px,1.7vw,22px); }.carousel-controls,.date-detail,.venue-soon,footer { font-size:clamp(13px,1.2vw,17px); }.countdown strong { position:relative; height:46px; overflow:hidden; }.count-value { position:absolute; inset:0; display:grid; place-items:center; width:100%; }.count-value.entering { animation:count-in .42s cubic-bezier(.22,.8,.25,1) both; }.count-value.leaving { animation:count-out .42s cubic-bezier(.22,.8,.25,1) both; }.count-value.current { position:static; }.venue-photo { position:relative; max-width:410px; margin:20px auto 0; overflow:hidden; }.venue-photo img { display:block; width:100%; aspect-ratio:4/5; object-fit:cover; object-position:50% 42%; filter:saturate(.87) sepia(.08); }.venue-photo:after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,rgba(58,42,28,.08),rgba(58,42,28,.38)); pointer-events:none; }.venue-photo-overlay { position:absolute; z-index:1; inset:0; display:grid; place-content:center; color:#fff9f0; text-align:center; text-shadow:0 2px 14px rgba(45,30,17,.4); }.venue-photo-overlay span { font:500 15px 'Bodoni Moda',var(--display); letter-spacing:.18em; }.venue-photo-overlay strong { margin-top:10px; font:500 clamp(28px,6vw,38px) var(--serif); letter-spacing:.13em; }.slide { position:relative; }.slide:after { content:'J & Y  /  2026'; position:absolute; top:15px; left:calc(7% + 14px); color:#fff8ed; font:500 11px 'Bodoni Moda',var(--display); letter-spacing:.17em; text-shadow:0 1px 7px rgba(42,27,17,.45); }.polaroid { position:relative; }.polaroid:after { content:'J  ♥  Y'; position:absolute; top:15px; right:14px; color:#fffaf1; font:500 11px 'Bodoni Moda',var(--display); letter-spacing:.1em; text-shadow:0 1px 6px rgba(42,27,17,.4); }.letter-image:before { content:'05 · 12 · 2026'; position:absolute; z-index:2; bottom:18px; left:18px; color:#fffaf1; font:500 12px 'Bodoni Moda',var(--display); letter-spacing:.18em; text-shadow:0 1px 8px rgba(42,27,17,.45); } @keyframes count-in { from { transform:translateY(-105%); } to { transform:translateY(0); } } @keyframes count-out { from { transform:translateY(0); } to { transform:translateY(105%); } } @media (min-width:900px) { .venue-photo { max-width:450px; }.venue-photo img { aspect-ratio:5/6; }.slide:after { left:calc(21% + 14px); } }
-.countdown { align-items:flex-start; }.countdown div { width:62px; min-width:62px; text-align:center; }.countdown strong { display:block; width:100%; height:52px; color:#9b784d; font:600 46px/1 'Bodoni Moda',var(--display); font-variant-numeric:tabular-nums; }.count-value { font:inherit!important; line-height:1!important; }.countdown>div>span:not(.count-value) { display:block; margin-top:5px; }.polaroid:after { content:none; }.polaroid { overflow:visible; transform:none; backface-visibility:visible; }.polaroid img { transform:none; backface-visibility:visible; }.tilt-left { transform:rotate(-7deg); }.tilt-right { transform:rotate(6deg); }.slide:nth-of-type(1):after { content:'TO HAVE & TO HOLD'; }.slide:nth-of-type(2):after { content:'FOREVER STARTS HERE'; }.slide:nth-of-type(3):after { content:'A LOVE TO CELEBRATE'; }.letter-image:before { content:'WITH ALL OUR LOVE'; }.venue-photo-overlay span { font-size:17px; } @media (max-width:420px) { .countdown { gap:7px; }.countdown div { width:54px; min-width:54px; }.countdown strong { font-size:40px; } }
-.hero-copy { transform:translateY(-33vh); }.hero h1 { font-size:clamp(42px,7.5vw,72px); line-height:1; }.hero .eyebrow { margin-bottom:8px; }.hero-date { margin-top:9px; letter-spacing:.14em; }.hero-shade { background:linear-gradient(180deg,rgba(35,24,17,.52) 0%,rgba(35,24,17,.2) 38%,rgba(35,24,17,.1) 62%,rgba(35,24,17,.26) 100%); } @media (min-width:900px) { .hero-copy { transform:translateY(-34vh); }.hero-shade { background:linear-gradient(180deg,rgba(35,24,17,.48) 0%,rgba(35,24,17,.16) 43%,rgba(35,24,17,.12) 100%),linear-gradient(90deg,rgba(47,37,31,.4),transparent 36%,transparent 67%,rgba(47,37,31,.35)); } }
+:root {
+  --ink: #3a2d27;
+  --cream: #f7f2e9;
+  --paper: #fffdf8;
+  --sage: #9b784d;
+  --gold: #b99a62;
+  --serif: 'Noto Serif TC', serif;
+  --display: 'Cormorant Garamond', serif;
+}
+
+
+/* =========================================================
+   基礎設定
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--cream);
+  font-family: var(--serif);
+}
+
+button,
+a {
+  font: inherit;
+}
+
+
+/* =========================================================
+   背景音樂按鈕
+   ========================================================= */
+
+.sound-toggle {
+  position: fixed;
+  z-index: 10;
+  top: 22px;
+  right: 22px;
+
+  width: 46px;
+  height: 46px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0;
+
+  border: 1px solid #fff8;
+  border-radius: 99px;
+
+  background: rgba(54, 38, 26, .31);
+  color: white;
+
+  backdrop-filter: blur(8px);
+
+  cursor: pointer;
+
+  line-height: 0;
+
+  transition:
+    background .3s ease,
+    transform .3s ease;
+}
+
+.sound-toggle:hover {
+  background: rgba(185, 154, 98, .55);
+  transform: scale(1.06);
+}
+
+.sound-toggle svg {
+  display: block;
+
+  width: 21px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.55;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  overflow: visible;
+}
+
+.sound-toggle.playing svg {
+  animation: music-spin 4s linear infinite;
+}
+
+.sound-toggle.muted {
+  opacity: .76;
+}
+
+.sound-toggle.muted svg {
+  opacity: .5;
+}
+
+
+/* =========================================================
+   Hero 首頁
+   ========================================================= */
+
+.hero {
+  position: relative;
+
+  min-height: 100svh;
+
+  display: grid;
+  place-items: center;
+
+  overflow: hidden;
+
+  color: white;
+  text-align: center;
+
+  background: #2f251f;
+}
+
+.hero > img {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: 50% 65%;
+}
+
+.hero-shade {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(35, 24, 17, .52) 0%,
+      rgba(35, 24, 17, .20) 38%,
+      rgba(35, 24, 17, .10) 62%,
+      rgba(35, 24, 17, .26) 100%
+    );
+}
+
+.hero-copy,
+.scroll-note {
+  position: relative;
+}
+
+.hero-copy {
+  z-index: 1;
+  transform: translateY(-33vh);
+}
+
+.hero:after {
+  content: '';
+
+  position: absolute;
+
+  width: 65vw;
+  height: 65vw;
+
+  max-width: 660px;
+  max-height: 660px;
+
+  border: 1px solid rgba(234, 209, 166, .4);
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  animation: halo 9s ease-in-out infinite;
+}
+
+.scroll-note {
+  z-index: 2;
+
+  position: absolute;
+
+  bottom: 26px;
+
+  color: #fff8e8;
+
+  text-decoration: none;
+
+  text-shadow: 0 1px 8px #31201699;
+
+  font:
+    11px
+    var(--display);
+
+  letter-spacing: .18em;
+}
+
+.scroll-note span {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 20px;
+}
+
+
+/* =========================================================
+   Hero 標題
+   ========================================================= */
+
+h1,
+h2,
+h3 {
+  font-weight: 500;
+}
+
+h1 {
+  margin: 0;
+
+  font-size: clamp(42px, 7.5vw, 72px);
+  line-height: 1;
+
+  letter-spacing: .06em;
+
+  text-shadow: 0 2px 18px #3338;
+}
+
+h1 i {
+  font:
+    italic 1em
+    var(--display);
+
+  margin: 0 .1em;
+}
+
+.hero .eyebrow {
+  margin-bottom: 8px;
+
+  color: #fff;
+
+  font:
+    500
+    clamp(15px, 1.7vw, 22px)
+    var(--display);
+
+  letter-spacing: .2em;
+}
+
+.eyebrow {
+  margin: 0 0 15px;
+
+  color: var(--gold);
+
+  font:
+    500
+    clamp(14px, 1.55vw, 20px)
+    'Bodoni Moda',
+    var(--display);
+
+  letter-spacing: .15em;
+
+  line-height: 1.6;
+}
+
+.hero-date {
+  margin-top: 9px;
+
+  font:
+    500
+    clamp(16px, 1.45vw, 21px)
+    var(--display);
+
+  letter-spacing: .14em;
+}
+
+.full-names {
+  margin: 0 0 20px;
+
+  color: #9a7a4d;
+
+  font:
+    500
+    13px
+    var(--serif);
+
+  letter-spacing: .16em;
+}
+
+.love-letter .full-names {
+  margin-top: -7px;
+}
+
+
+/* =========================================================
+   一般 Section
+   ========================================================= */
+
+.section-pad {
+  padding:
+    100px
+    max(24px, calc((100% - 620px) / 2));
+
+  text-align: center;
+}
+
+h2 {
+  margin: 0;
+
+  font-size: clamp(29px, 7vw, 43px);
+  line-height: 1.45;
+
+  letter-spacing: .04em;
+}
+
+.intro h2,
+.memories h2,
+.gallery h2,
+.calendar-wrap h2,
+.venue h2 {
+  color: #49362b;
+
+  font-weight: 500;
+
+  letter-spacing: .08em;
+
+  text-wrap: balance;
+}
+
+.intro p:last-child,
+.letter-copy p:not(.eyebrow) {
+  max-width: 430px;
+
+  margin: 28px auto 0;
+
+  color: #6c5749;
+
+  font-size: 13px;
+
+  letter-spacing: .045em;
+
+  line-height: 2;
+}
+
+
+/* =========================================================
+   輪播 Carousel
+   ========================================================= */
+
+.carousel-section {
+  padding: 55px 0 40px;
+
+  background: #352720;
+}
+
+.carousel {
+  max-width: 700px;
+
+  margin: auto;
+
+  overflow: hidden;
+}
+
+.slide {
+  position: relative;
+
+  display: none;
+
+  margin: 0;
+
+  color: white;
+
+  animation: fade .7s ease;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  display: block;
+
+  width: 86%;
+
+  aspect-ratio: 4 / 5;
+
+  margin: auto;
+
+  object-fit: cover;
+  object-position: 50% 40%;
+}
+
+.slide:after {
+  content: '';
+
+  position: absolute;
+
+  top: 15px;
+  left: calc(7% + 14px);
+
+  color: #fff8ed;
+
+  font:
+    500
+    11px
+    'Bodoni Moda',
+    var(--display);
+
+  letter-spacing: .17em;
+
+  text-shadow: 0 1px 7px rgba(42, 27, 17, .45);
+}
+
+.slide:nth-of-type(1):after {
+  content: 'TO HAVE & TO HOLD';
+}
+
+.slide:nth-of-type(2):after {
+  content: 'FOREVER STARTS HERE';
+}
+
+.slide:nth-of-type(3):after {
+  content: 'A LOVE TO CELEBRATE';
+}
+
+.crop-two {
+  object-position: 28% 48% !important;
+}
+
+.crop-three {
+  object-position: 72% 44% !important;
+}
+
+.carousel figcaption {
+  padding: 21px 20px 13px;
+
+  color: #f6ead7;
+
+  text-align: center;
+
+  font-family: var(--serif);
+  font-size: 13px;
+
+  line-height: 1.8;
+
+  letter-spacing: .035em;
+}
+
+.carousel-names {
+  padding-top: 4px;
+
+  color: #e8d4b1;
+
+  text-align: center;
+}
+
+.carousel-controls {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+
+  color: #f4efe6;
+
+  font:
+    clamp(13px, 1.2vw, 17px)
+    'Bodoni Moda',
+    var(--display);
+
+  letter-spacing: .15em;
+}
+
+.carousel-controls button {
+  border: 0;
+
+  background: transparent;
+
+  color: inherit;
+
+  cursor: pointer;
+
+  font-size: 22px;
+}
+
+.carousel-controls b {
+  color: #c9a76e;
+}
+
+
+/* =========================================================
+   Memories 回憶照片
+   ========================================================= */
+
+.memories {
+  background: #f0e8dc;
+
+  overflow: hidden;
+}
+
+.photo-strip {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin: 48px -26px 60px;
+}
+
+.polaroid {
+  position: relative;
+
+  flex: 0 0 35%;
+
+  margin: 0;
+  padding: 9px 9px 20px;
+
+  background: var(--paper);
+
+  box-shadow: 0 9px 17px #52604a22;
+
+  overflow: visible;
+
+  transform: none;
+
+  backface-visibility: visible;
+}
+
+.polaroid img {
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 3 / 4;
+
+  object-fit: cover;
+
+  transform: none;
+
+  backface-visibility: visible;
+
+  image-rendering: auto;
+}
+
+.polaroid figcaption {
+  padding: 8px 0 0;
+
+  color: #735e43;
+
+  font:
+    19px
+    'Bodoni Moda',
+    var(--display);
+
+  letter-spacing: .05em;
+}
+
+.tilt-left {
+  transform: rotate(-7deg);
+}
+
+.tilt-right {
+  transform: rotate(6deg);
+
+  margin-top: 17px;
+}
+
+.polaroid:after {
+  content: none;
+}
+
+.small {
+  margin-top: 43px;
+}
+
+
+/* =========================================================
+   LOVE LETTER
+   ========================================================= */
+
+.love-letter {
+  display: grid;
+
+  gap: 42px;
+
+  align-items: center;
+
+  background: #fffaf2;
+
+  text-align: left;
+}
+
+.letter-image {
+  position: relative;
+}
+
+.letter-image:after {
+  content: '';
+
+  position: absolute;
+
+  inset: 14px -14px -14px 14px;
+
+  border: 1px solid #c9a977;
+
+  z-index: 0;
+}
+
+.letter-image img {
+  position: relative;
+
+  z-index: 1;
+
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 4 / 5;
+
+  object-fit: cover;
+
+  transition: transform 1.2s ease;
+}
+
+.love-letter:hover .letter-image img {
+  transform: scale(1.025);
+}
+
+.letter-image:before {
+  content: 'WITH ALL OUR LOVE';
+
+  position: absolute;
+
+  z-index: 2;
+
+  bottom: 18px;
+  left: 18px;
+
+  color: #fffaf1;
+
+  font:
+    500
+    12px
+    'Bodoni Moda',
+    var(--display);
+
+  letter-spacing: .18em;
+
+  text-shadow: 0 1px 8px rgba(42, 27, 17, .45);
+}
+
+.letter-copy p:not(.eyebrow) {
+  max-width: 430px;
+
+  line-height: 2;
+
+  font-size: 13px;
+}
+
+.letter-copy span {
+  display: block;
+
+  margin-top: 28px;
+
+  color: var(--gold);
+
+  font:
+    15px
+    var(--display);
+
+  letter-spacing: .16em;
+}
+
+
+/* =========================================================
+   Gallery
+   ========================================================= */
+
+.gallery {
+  position: relative;
+
+  background: #f0e7da;
+
+  overflow: hidden;
+}
+
+.gallery:before {
+  content: 'LOVE';
+
+  position: absolute;
+
+  top: 4%;
+  left: -3%;
+
+  color: rgba(185, 154, 98, .11);
+
+  font:
+    clamp(100px, 24vw, 240px)
+    var(--display);
+
+  letter-spacing: .06em;
+}
+
+.gallery h2 {
+  position: relative;
+
+  z-index: 1;
+
+  margin-bottom: 6px;
+}
+
+.editorial-grid {
+  position: relative;
+
+  z-index: 1;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+
+  max-width: 680px;
+
+  margin: 42px auto 0;
+
+  text-align: left;
+}
+
+.editorial-grid figure {
+  margin: 0;
+
+  overflow: hidden;
+
+  background: #ded2bf;
+}
+
+.editorial-grid img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 210px;
+
+  object-fit: cover;
+
+  transition:
+    transform .9s
+    cubic-bezier(.2, .65, .25, 1);
+}
+
+.editorial-grid figure:hover img {
+  transform: scale(1.05);
+}
+
+.editorial-grid .grid-large {
+  grid-column: span 2;
+}
+
+.grid-large {
+  width: 100%;
+
+  padding: 18px;
+
+  background: #e7d5ba;
+}
+
+.grid-large img {
+  width: min(100%, 390px);
+
+  margin-inline: auto;
+
+  aspect-ratio: 3 / 4;
+
+  object-position: 50% 62%;
+}
+
+.grid-large figcaption {
+  padding: 13px 0 2px;
+
+  text-align: center;
+}
+
+.editorial-grid figcaption {
+  padding: 10px 0;
+
+  color: #846b4b;
+
+  font:
+    13px
+    'Bodoni Moda',
+    var(--display);
+
+  letter-spacing: .045em;
+
+  text-transform: none;
+}
+
+.quote-tile {
+  display: grid;
+
+  min-height: 210px;
+
+  place-items: center;
+
+  padding: 15px;
+
+  background: #b79a69;
+
+  color: #fff9ef;
+
+  text-align: center;
+
+  font:
+    34px
+    var(--display);
+
+  line-height: .55;
+}
+
+.quote-tile span {
+  font:
+    19px
+    var(--serif);
+
+  font-weight: 500;
+
+  line-height: 1.7;
+
+  letter-spacing: .08em;
+}
+
+
+/* =========================================================
+   倒數計時 Countdown
+   ========================================================= */
+
+.countdown {
+  /*
+   * 核心修正：
+   * 讓整個倒數區塊有自己的寬度
+   * 並平均分配四個數字
+   */
+  width: 100%;
+  max-width: 360px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 12px;
+}
+
+.countdown div {
+  /*
+   * 不使用固定 width
+   * 改成四等分
+   */
+  flex: 1 1 0;
+
+  width: auto;
+  min-width: 0;
+
+  text-align: center;
+}
+
+.countdown strong {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+
+  height: 52px;
+
+  overflow: hidden;
+
+  color: #9b784d;
+
+  font:
+    600
+    clamp(32px, 11vw, 46px) / 1
+    'Bodoni Moda',
+    var(--display);
+
+  font-variant-numeric: tabular-nums;
+}
+
+.count-value {
+  position: absolute;
+
+  inset: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  width: 100%;
+
+  font: inherit !important;
+
+  line-height: 1 !important;
+
+  white-space: nowrap;
+}
+
+.count-value.current {
+  position: static;
+}
+
+.count-value.entering {
+  animation:
+    count-in
+    .42s
+    cubic-bezier(.22, .8, .25, 1)
+    both;
+}
+
+.count-value.leaving {
+  animation:
+    count-out
+    .42s
+    cubic-bezier(.22, .8, .25, 1)
+    both;
+}
+
+.countdown > div > span:not(.count-value) {
+  display: block;
+
+  margin-top: 5px;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+
+  letter-spacing: .12em;
+
+  white-space: nowrap;
+}
+
+.countdown-label {
+  margin: 18px 0 0;
+
+  font-size: 11px;
+
+  letter-spacing: .15em;
+}
+
+
+/* =========================================================
+   日曆
+   ========================================================= */
+
+.calendar-wrap {
+  background: var(--paper);
+}
+
+.calendar-wrap h2 {
+  font-size: 35px;
+}
+
+.calendar {
+  max-width: 390px;
+
+  margin: 37px auto 0;
+}
+
+.weekdays,
+.dates {
+  display: grid;
+
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.weekdays {
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid #d6d2c8;
+
+  color: var(--gold);
+
+  font-size: 12px;
+}
+
+.dates span {
+  display: grid;
+
+  place-items: center;
+
+  height: 47px;
+
+  font-size: 14px;
+}
+
+.dates .wedding-day {
+  position: relative;
+
+  z-index: 0;
+
+  color: white;
+
+  font-weight: 600;
+}
+
+.dates .wedding-day:before {
+  content: '';
+
+  position: absolute;
+
+  z-index: -1;
+
+  width: 33px;
+  height: 33px;
+
+  border-radius: 50%;
+
+  background: var(--sage);
+}
+
+.date-detail {
+  margin: 27px 0 0;
+
+  color: var(--gold);
+
+  font:
+    clamp(13px, 1.2vw, 17px)
+    'Bodoni Moda',
+    var(--display);
+
+  letter-spacing: .14em;
+}
+
+
+/* =========================================================
+   場地 Venue
+   ========================================================= */
+
+.venue {
+  background: #e5d6bd;
+}
+
+.venue-card {
+  max-width: 410px;
+
+  margin: 44px auto 0;
+
+  padding: 34px 25px;
+
+  border: 1px solid #fff9;
+
+  background: #fffaf0b8;
+
+  box-shadow:
+    0 20px 50px
+    rgba(88, 60, 25, .12);
+}
+
+.venue-icon {
+  color: var(--gold);
+
+  font:
+    37px
+    var(--display);
+}
+
+.venue-label {
+  margin: 6px 0 10px;
+
+  color: var(--gold);
+
+  font:
+    10px
+    'Bodoni Moda',
+    var(--display);
+
+  letter-spacing: .11em;
+}
+
+.venue h3 {
+  margin: 0;
+
+  font-size: 23px;
+}
+
+.venue-card > p:not(.venue-label) {
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+.venue-time {
+  margin: 18px 0 !important;
+
+  color: var(--sage);
+
+  font:
+    15px
+    var(--display) !important;
+
+  letter-spacing: .1em;
+}
+
+.venue-card a {
+  display: inline-block;
+
+  padding: 12px 20px;
+
+  border-bottom: 1px solid var(--sage);
+
+  color: var(--ink);
+
+  text-decoration: none;
+
+  font-size: 13px;
+}
+
+.venue-card a span {
+  margin-left: 8px;
+
+  color: var(--gold);
+
+  font-size: 18px;
+}
+
+.venue-soon {
+  display: inline-block;
+
+  padding: 12px 3px;
+
+  border-bottom: 1px solid var(--sage);
+
+  color: var(--sage);
+
+  font:
+    10px
+    'Bodoni Moda',
+    var(--display);
+
+  letter-spacing: .11em;
+}
+
+
+/* =========================================================
+   Venue 圖片
+   ========================================================= */
+
+.venue-photo {
+  position: relative;
+
+  max-width: 410px;
+
+  margin: 20px auto 0;
+
+  overflow: hidden;
+}
+
+.venue-photo img {
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 4 / 5;
+
+  object-fit: cover;
+
+  object-position: 50% 42%;
+
+  filter:
+    saturate(.87)
+    sepia(.08);
+}
+
+.venue-photo:after {
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(58, 42, 28, .08),
+      rgba(58, 42, 28, .38)
+    );
+
+  pointer-events: none;
+}
+
+.venue-photo-overlay {
+  position: absolute;
+
+  z-index: 1;
+
+  inset: 0;
+
+  display: grid;
+
+  place-content: center;
+
+  color: #fff9f0;
+
+  text-align: center;
+
+  text-shadow:
+    0 2px 14px
+    rgba(45, 30, 17, .4);
+}
+
+.venue-photo-overlay span {
+  font:
+    500
+    17px
+    'Bodoni Moda',
+    var(--display);
+
+  letter-spacing: .18em;
+}
+
+.venue-photo-overlay strong {
+  margin-top: 10px;
+
+  font:
+    500
+    clamp(28px, 6vw, 38px)
+    var(--serif);
+
+  letter-spacing: .13em;
+}
+
+
+/* =========================================================
+   Footer
+   ========================================================= */
+
+footer {
+  padding: 27px 20px;
+
+  background: var(--ink);
+
+  color: #e8e3d9;
+
+  text-align: center;
+
+  font:
+    clamp(13px, 1.2vw, 17px)
+    'Bodoni Moda',
+    var(--display);
+
+  letter-spacing: .2em;
+}
+
+
+/* =========================================================
+   Reveal 動畫
+   ========================================================= */
+
+.reveal {
+  opacity: 0;
+
+  transform: translateY(24px);
+
+  transition:
+    opacity .85s ease,
+    transform .85s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   動畫
+   ========================================================= */
+
+@keyframes fade {
+  from {
+    opacity: .1;
+    transform: scale(.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes music-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes halo {
+  0%,
+  100% {
+    transform: scale(.92);
+    opacity: .3;
+  }
+
+  50% {
+    transform: scale(1.06);
+    opacity: .7;
+  }
+}
+
+@keyframes count-in {
+  from {
+    transform: translateY(-105%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes count-out {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(105%);
+  }
+}
+
+
+/* =========================================================
+   手機版
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  /* -------------------------------------------------------
+     倒數計時
+     ------------------------------------------------------- */
+
+  .countdown {
+    width: calc(100% - 20px);
+
+    max-width: 340px;
+
+    gap: 8px;
+  }
+
+  .countdown div {
+    flex: 1 1 0;
+
+    width: auto;
+    min-width: 0;
+  }
+
+  .countdown strong {
+    height: 48px;
+
+    font-size: clamp(30px, 10.5vw, 40px);
+  }
+
+  .countdown > div > span:not(.count-value) {
+    margin-top: 5px;
+
+    font-size: 10px;
+
+    letter-spacing: .08em;
+  }
+
+
+  /* -------------------------------------------------------
+     Hero
+     ------------------------------------------------------- */
+
+  .hero-copy {
+    transform: translateY(-33vh);
+  }
+
+
+  /* -------------------------------------------------------
+     Gallery
+     ------------------------------------------------------- */
+
+  .editorial-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+  }
+
+  .grid-large {
+    width: 100%;
+
+    padding: 18px;
+  }
+
+  .grid-large img {
+    width: min(100%, 390px);
+  }
+}
+
+
+/* =========================================================
+   小型手機
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .countdown {
+    width: calc(100% - 12px);
+
+    max-width: 340px;
+
+    gap: 6px;
+  }
+
+  .countdown div {
+    flex: 1 1 0;
+
+    width: auto;
+    min-width: 0;
+  }
+
+  .countdown strong {
+    height: 46px;
+
+    font-size: clamp(28px, 10vw, 38px);
+  }
+
+  .countdown > div > span:not(.count-value) {
+    margin-top: 4px;
+
+    font-size: 9px;
+
+    letter-spacing: .04em;
+  }
+
+  .section-pad {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .photo-strip {
+    gap: 8px;
+
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+
+/* =========================================================
+   非常小的手機
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .countdown {
+    width: calc(100% - 8px);
+
+    gap: 4px;
+  }
+
+  .countdown strong {
+    height: 43px;
+
+    font-size: 28px;
+  }
+
+  .countdown > div > span:not(.count-value) {
+    margin-top: 4px;
+
+    font-size: 8px;
+
+    letter-spacing: .02em;
+  }
+}
+
+
+/* =========================================================
+   320px 以下極小螢幕
+   ========================================================= */
+
+@media (max-width: 320px) {
+
+  .countdown {
+    width: 100%;
+
+    gap: 3px;
+  }
+
+  .countdown strong {
+    height: 42px;
+
+    font-size: 26px;
+  }
+
+  .countdown > div > span:not(.count-value) {
+    font-size: 8px;
+
+    letter-spacing: 0;
+  }
+}
+
+
+/* =========================================================
+   平板 / 桌面版
+   ========================================================= */
+
+@media (min-width: 700px) {
+
+  .section-pad {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .photo-strip {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .polaroid {
+    max-width: 175px;
+  }
+
+  .slide img {
+    max-height: 620px;
+
+    width: 65%;
+  }
+
+  .editorial-grid {
+    gap: 20px;
+  }
+}
+
+
+/* =========================================================
+   900px 以上桌面版
+   ========================================================= */
+
+@media (min-width: 900px) {
+
+  .hero {
+    min-height: clamp(760px, 100svh, 980px);
+
+    background: #2f251f;
+  }
+
+  .hero > img {
+    inset: 0 auto 0 50%;
+
+    width: min(56vw, 660px);
+    height: 100%;
+
+    transform: translateX(-50%);
+
+    object-fit: cover;
+
+    object-position: 50% 65%;
+  }
+
+  .hero-copy {
+    transform: translateY(-34vh);
+  }
+
+  .hero-shade {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(35, 24, 17, .48) 0%,
+        rgba(35, 24, 17, .16) 43%,
+        rgba(35, 24, 17, .12) 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(47, 37, 31, .4),
+        transparent 36%,
+        transparent 67%,
+        rgba(47, 37, 31, .35)
+      );
+  }
+
+  .carousel {
+    padding-inline: 20px;
+  }
+
+  .slide img {
+    width: min(58%, 460px);
+  }
+
+  .slide:after {
+    left: calc(21% + 14px);
+  }
+
+  .editorial-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    max-width: 700px;
+  }
+
+  .grid-large {
+    width: 420px;
+
+    padding: 24px;
+  }
+
+  .grid-large img {
+    width: 390px;
+  }
+
+  .love-letter {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .letter-copy {
+    padding-left: 30px;
+  }
+
+  .venue-photo {
+    max-width: 450px;
+  }
+
+  .venue-photo img {
+    aspect-ratio: 5 / 6;
+  }
+
+  .photo-strip {
+    gap: 18px;
+  }
+
+  .polaroid {
+    flex-basis: 165px;
+  }
+}
+
+
+/* =========================================================
+   減少動畫偏好
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: .01ms !important;
+
+    scroll-behavior: auto !important;
+  }
+}

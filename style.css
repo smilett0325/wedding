@@ -4,8 +4,8 @@
   --paper: #fffdf8;
   --sage: #9b784d;
   --gold: #b99a62;
-  --serif: 'Noto Serif TC', serif;
-  --display: 'Cormorant Garamond', serif;
+  --serif: "Noto Serif TC", serif;
+  --display: "Cormorant Garamond", serif;
 }
 
 
@@ -55,7 +55,7 @@ a {
   border: 1px solid #fff8;
   border-radius: 99px;
 
-  background: rgba(54, 38, 26, .31);
+  background: rgba(54, 38, 26, 0.31);
   color: white;
 
   backdrop-filter: blur(8px);
@@ -65,12 +65,12 @@ a {
   line-height: 0;
 
   transition:
-    background .3s ease,
-    transform .3s ease;
+    background 0.3s ease,
+    transform 0.3s ease;
 }
 
 .sound-toggle:hover {
-  background: rgba(185, 154, 98, .55);
+  background: rgba(185, 154, 98, 0.55);
   transform: scale(1.06);
 }
 
@@ -93,11 +93,11 @@ a {
 }
 
 .sound-toggle.muted {
-  opacity: .76;
+  opacity: 0.76;
 }
 
 .sound-toggle.muted svg {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 
@@ -141,10 +141,10 @@ a {
   background:
     linear-gradient(
       180deg,
-      rgba(35, 24, 17, .52) 0%,
-      rgba(35, 24, 17, .20) 38%,
-      rgba(35, 24, 17, .10) 62%,
-      rgba(35, 24, 17, .26) 100%
+      rgba(35, 24, 17, 0.52) 0%,
+      rgba(35, 24, 17, 0.2) 38%,
+      rgba(35, 24, 17, 0.1) 62%,
+      rgba(35, 24, 17, 0.26) 100%
     );
 }
 
@@ -159,7 +159,7 @@ a {
 }
 
 .hero:after {
-  content: '';
+  content: "";
 
   position: absolute;
 
@@ -169,7 +169,7 @@ a {
   max-width: 660px;
   max-height: 660px;
 
-  border: 1px solid rgba(234, 209, 166, .4);
+  border: 1px solid rgba(234, 209, 166, 0.4);
   border-radius: 50%;
 
   pointer-events: none;
@@ -194,7 +194,7 @@ a {
     11px
     var(--display);
 
-  letter-spacing: .18em;
+  letter-spacing: 0.18em;
 }
 
 .scroll-note span {
@@ -222,7 +222,7 @@ h1 {
   font-size: clamp(42px, 7.5vw, 72px);
   line-height: 1;
 
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
 
   text-shadow: 0 2px 18px #3338;
 }
@@ -232,7 +232,7 @@ h1 i {
     italic 1em
     var(--display);
 
-  margin: 0 .1em;
+  margin: 0 0.1em;
 }
 
 .hero .eyebrow {
@@ -245,7 +245,7 @@ h1 i {
     clamp(15px, 1.7vw, 22px)
     var(--display);
 
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
 }
 
 .eyebrow {
@@ -256,10 +256,10 @@ h1 i {
   font:
     500
     clamp(14px, 1.55vw, 20px)
-    'Bodoni Moda',
+    "Bodoni Moda",
     var(--display);
 
-  letter-spacing: .15em;
+  letter-spacing: 0.15em;
 
   line-height: 1.6;
 }
@@ -272,7 +272,7 @@ h1 i {
     clamp(16px, 1.45vw, 21px)
     var(--display);
 
-  letter-spacing: .14em;
+  letter-spacing: 0.14em;
 }
 
 .full-names {
@@ -285,11 +285,53 @@ h1 i {
     13px
     var(--serif);
 
-  letter-spacing: .16em;
+  letter-spacing: 0.16em;
 }
 
 .love-letter .full-names {
   margin-top: -7px;
+}
+
+
+/* =========================================================
+   Hero 新人姓名
+   家榮
+    &
+   毓甄
+   ========================================================= */
+
+#couple-name {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  line-height: 1;
+}
+
+#couple-name span {
+  display: block;
+}
+
+#couple-name i {
+  display: block;
+
+  font-family: var(--display);
+
+  font-style: italic;
+
+  font-size: 0.55em;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  margin: 10px 0;
 }
 
 
@@ -311,7 +353,7 @@ h2 {
   font-size: clamp(29px, 7vw, 43px);
   line-height: 1.45;
 
-  letter-spacing: .04em;
+  letter-spacing: 0.04em;
 }
 
 .intro h2,
@@ -323,7 +365,7 @@ h2 {
 
   font-weight: 500;
 
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
 
   text-wrap: balance;
 }
@@ -338,7 +380,7 @@ h2 {
 
   font-size: 13px;
 
-  letter-spacing: .045em;
+  letter-spacing: 0.045em;
 
   line-height: 2;
 }
@@ -371,7 +413,7 @@ h2 {
 
   color: white;
 
-  animation: fade .7s ease;
+  animation: fade 0.7s ease;
 }
 
 .slide.active {
@@ -388,15 +430,17 @@ h2 {
   margin: auto;
 
   object-fit: cover;
+
   object-position: 50% 40%;
 }
 
 .slide:after {
-  content: '';
+  content: "";
 
   position: absolute;
 
   top: 15px;
+
   left: calc(7% + 14px);
 
   color: #fff8ed;
@@ -404,24 +448,24 @@ h2 {
   font:
     500
     11px
-    'Bodoni Moda',
+    "Bodoni Moda",
     var(--display);
 
-  letter-spacing: .17em;
+  letter-spacing: 0.17em;
 
-  text-shadow: 0 1px 7px rgba(42, 27, 17, .45);
+  text-shadow: 0 1px 7px rgba(42, 27, 17, 0.45);
 }
 
 .slide:nth-of-type(1):after {
-  content: 'TO HAVE & TO HOLD';
+  content: "TO HAVE & TO HOLD";
 }
 
 .slide:nth-of-type(2):after {
-  content: 'FOREVER STARTS HERE';
+  content: "FOREVER STARTS HERE";
 }
 
 .slide:nth-of-type(3):after {
-  content: 'A LOVE TO CELEBRATE';
+  content: "A LOVE TO CELEBRATE";
 }
 
 .crop-two {
@@ -440,11 +484,12 @@ h2 {
   text-align: center;
 
   font-family: var(--serif);
+
   font-size: 13px;
 
   line-height: 1.8;
 
-  letter-spacing: .035em;
+  letter-spacing: 0.035em;
 }
 
 .carousel-names {
@@ -467,10 +512,10 @@ h2 {
 
   font:
     clamp(13px, 1.2vw, 17px)
-    'Bodoni Moda',
+    "Bodoni Moda",
     var(--display);
 
-  letter-spacing: .15em;
+  letter-spacing: 0.15em;
 }
 
 .carousel-controls button {
@@ -517,6 +562,7 @@ h2 {
   flex: 0 0 35%;
 
   margin: 0;
+
   padding: 9px 9px 20px;
 
   background: var(--paper);
@@ -553,10 +599,10 @@ h2 {
 
   font:
     19px
-    'Bodoni Moda',
+    "Bodoni Moda",
     var(--display);
 
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
 }
 
 .tilt-left {
@@ -599,7 +645,7 @@ h2 {
 }
 
 .letter-image:after {
-  content: '';
+  content: "";
 
   position: absolute;
 
@@ -631,7 +677,7 @@ h2 {
 }
 
 .letter-image:before {
-  content: 'WITH ALL OUR LOVE';
+  content: "WITH ALL OUR LOVE";
 
   position: absolute;
 
@@ -645,12 +691,12 @@ h2 {
   font:
     500
     12px
-    'Bodoni Moda',
+    "Bodoni Moda",
     var(--display);
 
-  letter-spacing: .18em;
+  letter-spacing: 0.18em;
 
-  text-shadow: 0 1px 8px rgba(42, 27, 17, .45);
+  text-shadow: 0 1px 8px rgba(42, 27, 17, 0.45);
 }
 
 .letter-copy p:not(.eyebrow) {
@@ -672,7 +718,7 @@ h2 {
     15px
     var(--display);
 
-  letter-spacing: .16em;
+  letter-spacing: 0.16em;
 }
 
 
@@ -689,20 +735,20 @@ h2 {
 }
 
 .gallery:before {
-  content: 'LOVE';
+  content: "LOVE";
 
   position: absolute;
 
   top: 4%;
   left: -3%;
 
-  color: rgba(185, 154, 98, .11);
+  color: rgba(185, 154, 98, 0.11);
 
   font:
     clamp(100px, 24vw, 240px)
     var(--display);
 
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
 }
 
 .gallery h2 {
@@ -750,8 +796,8 @@ h2 {
   object-fit: cover;
 
   transition:
-    transform .9s
-    cubic-bezier(.2, .65, .25, 1);
+    transform 0.9s
+    cubic-bezier(0.2, 0.65, 0.25, 1);
 }
 
 .editorial-grid figure:hover img {
@@ -793,10 +839,10 @@ h2 {
 
   font:
     13px
-    'Bodoni Moda',
+    "Bodoni Moda",
     var(--display);
 
-  letter-spacing: .045em;
+  letter-spacing: 0.045em;
 
   text-transform: none;
 }
@@ -820,7 +866,7 @@ h2 {
     34px
     var(--display);
 
-  line-height: .55;
+  line-height: 0.55;
 }
 
 .quote-tile span {
@@ -832,7 +878,7 @@ h2 {
 
   line-height: 1.7;
 
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
 }
 
 
@@ -841,12 +887,8 @@ h2 {
    ========================================================= */
 
 .countdown {
-  /*
-   * 核心修正：
-   * 讓整個倒數區塊有自己的寬度
-   * 並平均分配四個數字
-   */
   width: 100%;
+
   max-width: 360px;
 
   margin-left: auto;
@@ -861,10 +903,6 @@ h2 {
 }
 
 .countdown div {
-  /*
-   * 不使用固定 width
-   * 改成四等分
-   */
   flex: 1 1 0;
 
   width: auto;
@@ -889,7 +927,7 @@ h2 {
   font:
     600
     clamp(32px, 11vw, 46px) / 1
-    'Bodoni Moda',
+    "Bodoni Moda",
     var(--display);
 
   font-variant-numeric: tabular-nums;
@@ -920,16 +958,16 @@ h2 {
 .count-value.entering {
   animation:
     count-in
-    .42s
-    cubic-bezier(.22, .8, .25, 1)
+    0.42s
+    cubic-bezier(0.22, 0.8, 0.25, 1)
     both;
 }
 
 .count-value.leaving {
   animation:
     count-out
-    .42s
-    cubic-bezier(.22, .8, .25, 1)
+    0.42s
+    cubic-bezier(0.22, 0.8, 0.25, 1)
     both;
 }
 
@@ -942,7 +980,7 @@ h2 {
 
   line-height: 1.4;
 
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
 
   white-space: nowrap;
 }
@@ -952,7 +990,7 @@ h2 {
 
   font-size: 11px;
 
-  letter-spacing: .15em;
+  letter-spacing: 0.15em;
 }
 
 
@@ -1012,7 +1050,7 @@ h2 {
 }
 
 .dates .wedding-day:before {
-  content: '';
+  content: "";
 
   position: absolute;
 
@@ -1033,10 +1071,10 @@ h2 {
 
   font:
     clamp(13px, 1.2vw, 17px)
-    'Bodoni Moda',
+    "Bodoni Moda",
     var(--display);
 
-  letter-spacing: .14em;
+  letter-spacing: 0.14em;
 }
 
 
@@ -1061,7 +1099,7 @@ h2 {
 
   box-shadow:
     0 20px 50px
-    rgba(88, 60, 25, .12);
+    rgba(88, 60, 25, 0.12);
 }
 
 .venue-icon {
@@ -1079,10 +1117,10 @@ h2 {
 
   font:
     10px
-    'Bodoni Moda',
+    "Bodoni Moda",
     var(--display);
 
-  letter-spacing: .11em;
+  letter-spacing: 0.11em;
 }
 
 .venue h3 {
@@ -1091,11 +1129,27 @@ h2 {
   font-size: 23px;
 }
 
-.venue-card > p:not(.venue-label) {
+
+/* =========================================================
+   婚宴地址
+   ========================================================= */
+
+.venue-address {
+  margin: 10px 0 18px;
+
+  color: #6c5749;
+
   font-size: 13px;
 
   line-height: 1.8;
+
+  letter-spacing: 0.04em;
 }
+
+
+/* =========================================================
+   婚宴時間
+   ========================================================= */
 
 .venue-time {
   margin: 18px 0 !important;
@@ -1106,21 +1160,59 @@ h2 {
     15px
     var(--display) !important;
 
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
 
-.venue-card a {
+
+/* =========================================================
+   Google Maps 按鈕
+   ========================================================= */
+
+.venue-map {
   display: inline-block;
 
-  padding: 12px 20px;
+  margin-top: 3px;
 
-  border-bottom: 1px solid var(--sage);
+  padding: 11px 20px;
+
+  border: 1px solid rgba(155, 120, 77, 0.65);
 
   color: var(--ink);
 
   text-decoration: none;
 
   font-size: 13px;
+
+  letter-spacing: 0.05em;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.venue-map:hover {
+  background: var(--sage);
+
+  border-color: var(--sage);
+
+  color: #fff;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   舊有 Venue 連結樣式
+   ========================================================= */
+
+.venue-card a {
+  display: inline-block;
+
+  color: var(--ink);
+
+  text-decoration: none;
 }
 
 .venue-card a span {
@@ -1142,10 +1234,10 @@ h2 {
 
   font:
     10px
-    'Bodoni Moda',
+    "Bodoni Moda",
     var(--display);
 
-  letter-spacing: .11em;
+  letter-spacing: 0.11em;
 }
 
 
@@ -1175,12 +1267,12 @@ h2 {
   object-position: 50% 42%;
 
   filter:
-    saturate(.87)
-    sepia(.08);
+    saturate(0.87)
+    sepia(0.08);
 }
 
 .venue-photo:after {
-  content: '';
+  content: "";
 
   position: absolute;
 
@@ -1189,8 +1281,8 @@ h2 {
   background:
     linear-gradient(
       180deg,
-      rgba(58, 42, 28, .08),
-      rgba(58, 42, 28, .38)
+      rgba(58, 42, 28, 0.08),
+      rgba(58, 42, 28, 0.38)
     );
 
   pointer-events: none;
@@ -1213,17 +1305,17 @@ h2 {
 
   text-shadow:
     0 2px 14px
-    rgba(45, 30, 17, .4);
+    rgba(45, 30, 17, 0.4);
 }
 
 .venue-photo-overlay span {
   font:
     500
     17px
-    'Bodoni Moda',
+    "Bodoni Moda",
     var(--display);
 
-  letter-spacing: .18em;
+  letter-spacing: 0.18em;
 }
 
 .venue-photo-overlay strong {
@@ -1234,7 +1326,7 @@ h2 {
     clamp(28px, 6vw, 38px)
     var(--serif);
 
-  letter-spacing: .13em;
+  letter-spacing: 0.13em;
 }
 
 
@@ -1253,10 +1345,10 @@ footer {
 
   font:
     clamp(13px, 1.2vw, 17px)
-    'Bodoni Moda',
+    "Bodoni Moda",
     var(--display);
 
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
 }
 
 
@@ -1270,8 +1362,8 @@ footer {
   transform: translateY(24px);
 
   transition:
-    opacity .85s ease,
-    transform .85s ease;
+    opacity 0.85s ease,
+    transform 0.85s ease;
 }
 
 .reveal.visible {
@@ -1287,12 +1379,14 @@ footer {
 
 @keyframes fade {
   from {
-    opacity: .1;
-    transform: scale(.99);
+    opacity: 0.1;
+
+    transform: scale(0.99);
   }
 
   to {
     opacity: 1;
+
     transform: scale(1);
   }
 }
@@ -1306,13 +1400,15 @@ footer {
 @keyframes halo {
   0%,
   100% {
-    transform: scale(.92);
-    opacity: .3;
+    transform: scale(0.92);
+
+    opacity: 0.3;
   }
 
   50% {
     transform: scale(1.06);
-    opacity: .7;
+
+    opacity: 0.7;
   }
 }
 
@@ -1373,7 +1469,7 @@ footer {
 
     font-size: 10px;
 
-    letter-spacing: .08em;
+    letter-spacing: 0.08em;
   }
 
 
@@ -1383,6 +1479,10 @@ footer {
 
   .hero-copy {
     transform: translateY(-33vh);
+  }
+
+  #couple-name i {
+    margin: 9px 0;
   }
 
 
@@ -1404,6 +1504,30 @@ footer {
 
   .grid-large img {
     width: min(100%, 390px);
+  }
+
+
+  /* -------------------------------------------------------
+     Venue
+     ------------------------------------------------------- */
+
+  .venue-card {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .venue h3 {
+    font-size: 21px;
+  }
+
+  .venue-address {
+    font-size: 12px;
+  }
+
+  .venue-map {
+    padding: 10px 17px;
+
+    font-size: 12px;
   }
 }
 
@@ -1440,7 +1564,7 @@ footer {
 
     font-size: 9px;
 
-    letter-spacing: .04em;
+    letter-spacing: 0.04em;
   }
 
   .section-pad {
@@ -1480,7 +1604,7 @@ footer {
 
     font-size: 8px;
 
-    letter-spacing: .02em;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -1576,16 +1700,16 @@ footer {
     background:
       linear-gradient(
         180deg,
-        rgba(35, 24, 17, .48) 0%,
-        rgba(35, 24, 17, .16) 43%,
-        rgba(35, 24, 17, .12) 100%
+        rgba(35, 24, 17, 0.48) 0%,
+        rgba(35, 24, 17, 0.16) 43%,
+        rgba(35, 24, 17, 0.12) 100%
       ),
       linear-gradient(
         90deg,
-        rgba(47, 37, 31, .4),
+        rgba(47, 37, 31, 0.4),
         transparent 36%,
         transparent 67%,
-        rgba(47, 37, 31, .35)
+        rgba(47, 37, 31, 0.35)
       );
   }
 
@@ -1653,11 +1777,11 @@ footer {
   *,
   *::before,
   *::after {
-    animation-duration: .01ms !important;
+    animation-duration: 0.01ms !important;
 
     animation-iteration-count: 1 !important;
 
-    transition-duration: .01ms !important;
+    transition-duration: 0.01ms !important;
 
     scroll-behavior: auto !important;
   }
